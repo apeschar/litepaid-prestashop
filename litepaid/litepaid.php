@@ -32,8 +32,22 @@ class LitePaid extends PaymentModule {
     }
 
     public function getContent() {
+        $html = '<h1>' . $this->displayName . '</h1>';
+
+        if(Tools::isSubmit('litepaid')) {
+            Configuration::updateValue('LITEPAID_API_KEY', trim(Tools::getValue('api_key')));
+            Configuration::updateValue('LITEPAID_TEST_MODE', Tools::getValue('test_mode') ? '1' : '');
+            $html .= $this->displayConfirmation($this->l('Settings updated'));
+        }
+
         ob_start();
         require 'html/admin_form.php';
-        return ob_get_clean();
+        $html .= ob_get_clean();
+
+        return $html;
+    }
+
+    public function escape($str) {
+        return htmlentities($str, ENT_QUOTES, 'UTF-8');
     }
 }
