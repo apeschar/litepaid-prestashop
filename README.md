@@ -13,7 +13,8 @@ module has been developed with v1.6.0.9 but should work for v1.5 and up.
 Installation
 ------------
 
- 1. Upload the files in the litepaid/ directory to your web server.
+ 1. Upload the files in the litepaid/ directory to to the modules/ folder on
+    your web server.
 
  2. Log in to the PrestaShop interface and install the module.
 

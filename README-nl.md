@@ -13,7 +13,8 @@ versie v1.6.0.9 maar werkt op versie v1.5 en hoger.
 Installatie
 -----------
 
- 1. Upload de bestanden in de litepaid/ map naar uw webserver.
+ 1. Upload de bestanden in de litepaid/ map naar de modules/ map op uw
+    webserver.
 
  2. Log in op de PrestaShop admin om de module te installeren.
 
