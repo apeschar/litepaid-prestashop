@@ -11,6 +11,20 @@
             <input id="litepaid-api-key" type="text" name="api_key" value="<?=$this->escape(Configuration::get('LITEPAID_API_KEY'));?>" style="width:250px;">
         </div>
 
+        <label for="litepaid-os-accepted"><?=$this->l('Status for successful payment');?></label>
+        <div class="margin-form">
+            <select name="LITEPAID_OS_ACCEPTED" id="litepaid-os-accepted">
+                <?=$this->getOrderStatesOptions(Configuration::get('LITEPAID_OS_ACCEPTED'));?>
+            </select>
+        </div>
+
+        <label for="litepaid-os-error"><?=$this->l('Status for failed payment');?></label>
+        <div class="margin-form">
+            <select name="LITEPAID_OS_ERROR" id="litepaid-os-error">
+                <?=$this->getOrderStatesOptions(Configuration::get('LITEPAID_OS_ERROR'));?>
+            </select>
+        </div>
+
         <label><?=$this->l('Test mode');?></label>
         <div class="margin-form">
             <label class="t" for="litepaid-test-mode-on"><img src="../img/admin/enabled.gif" alt=""></label>
